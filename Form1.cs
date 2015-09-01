@@ -19,11 +19,7 @@ namespace Checks
     
     public partial class Form1 : Form
     {
-        
-        string name, memo, amountNum, amountWord;
-        int checkNum = 3001; //Variable for check number
-        int numOfChecks = 0;
-
+        InputProcessor inputProcessor = new InputProcessor();
         public Form1()
         {
             InitializeComponent();
@@ -33,8 +29,6 @@ namespace Checks
         {
             //Receiving the date from the system
             DateTime thisDay = DateTime.Today;
-            Console.WriteLine(thisDay.ToString());
-            Console.WriteLine();
 
             //Assigning the formated date to the correct textbox
             textBox10.Text = (thisDay.ToString("d"));
@@ -52,7 +46,7 @@ namespace Checks
             Controls.Add(picture);
             picture.ImageLocation = @"..\Image\check.png";
         }
-
+        
         //Creating label 1 for "Name"
         private void label1_Click(object sender, EventArgs e)
         {
@@ -127,41 +121,33 @@ namespace Checks
         {
             
         }
-
+        
         //Code for update button
         private void button1_Click(object sender, EventArgs e)
         {
-            name = textBox1.Text;
-            memo = textBox2.Text;
-            amountNum = textBox3.Text;
-            
+            inputProcessor.setName(textBox1.Text);
+            inputProcessor.setMemo(textBox2.Text);
+            inputProcessor.setCheckAmount(textBox3.Text);
+
             //Tally needs to be set to textBox12.Text
             // = textBox12.Text;
-            
+            textBox11.Text = inputProcessor.getCheckNumber();
+            textBox9.Text = inputProcessor.getCheckNumber();
 
             //amountWord needs to be set to dollar amount in words
             //amountWord = ;
+            textBox7.Text = inputProcessor.checkAmountToString(inputProcessor.getCheckAmount());
 
             //Setting text boxs to user input
-            textBox4.Text = name;
-            textBox6.Text = memo;
-            textBox7.Text = amountWord;
-            textBox8.Text = amountNum;
+            textBox4.Text = inputProcessor.getName();
+            textBox6.Text = inputProcessor.getMemo();
+            textBox8.Text = inputProcessor.getCheckAmount();
+            textBox12.Text = inputProcessor.getTotalAmount();
 
-            //Incrementing check number
-            checkNum++;
-            string checkText = checkNum.ToString();
-            textBox9.Text = checkText;
-
-            //Incrementing the number of checks
-            numOfChecks++;
-            string numText = numOfChecks.ToString();
-            textBox11.Text = numText;
+            inputProcessor.newCheck();
 
             //Creating confirmation pop up window
             MessageBox.Show("Your check has been updated.");
-
-
         }
     }
 }
