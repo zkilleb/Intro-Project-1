@@ -158,7 +158,6 @@
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 13);
             this.textBox9.TabIndex = 13;
-            this.textBox9.Text = "3002";
             this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // textBox10
@@ -176,9 +175,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Number of Checks:";
+            this.label5.Text = "Checks Number:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox11
@@ -194,13 +193,13 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(217, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Tally: ";
+            this.label6.Text = "Total Amount: ";
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(258, 215);
+            this.textBox12.Location = new System.Drawing.Point(299, 215);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 20);
             this.textBox12.TabIndex = 18;
