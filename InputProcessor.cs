@@ -8,6 +8,7 @@ namespace Checks
 {
     class InputProcessor
     {
+        // error, delete
         Tally tally = new Tally();
         private string name;
         private string memo;
