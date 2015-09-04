@@ -44,7 +44,7 @@ namespace Checks
 
             //Setting the check as picture box background
             Controls.Add(picture);
-            picture.ImageLocation = @"..\Image\check.png";
+            picture.ImageLocation = @"../check.png";
         }
         
         //Creating label 1 for "Name"
