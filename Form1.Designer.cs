@@ -137,7 +137,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Location = new System.Drawing.Point(28, 85);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 13);
+            this.textBox7.Size = new System.Drawing.Size(468, 13);
             this.textBox7.TabIndex = 11;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
