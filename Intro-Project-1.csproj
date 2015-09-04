@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Intro-Project-1.vshost.exe" />
+    <Content Include="bin\Image\check.png" />
     <Content Include="obj\Debug\Intro-Project-1.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
