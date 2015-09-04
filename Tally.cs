@@ -2,8 +2,8 @@
 {
     class Tally
     {
-        private int checkNumber = 3001;
-        private int totalAmount = 0;
+        private int checkNumber = 3002;
+        private double totalAmount = 0;
 
         public string getCheckNumber()
         {
@@ -17,7 +17,7 @@
         {
             this.checkNumber++;
         }
-        public void addTotalAmount(int amount)
+        public void addTotalAmount(double amount)
         {
             this.totalAmount += amount;
         }

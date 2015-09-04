@@ -69,7 +69,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="bin\Debug\Intro-Project-1.exe.config" />
     <None Include="bin\Debug\Intro-Project-1.vshost.exe.config" />

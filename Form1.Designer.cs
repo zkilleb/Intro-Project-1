@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPayTo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMemo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtCheckPayTo = new System.Windows.Forms.TextBox();
+            this.txtCheckMemo = new System.Windows.Forms.TextBox();
+            this.txtCheckAmtString = new System.Windows.Forms.TextBox();
+            this.txtCheckAmount = new System.Windows.Forms.TextBox();
+            this.txtCheckNum = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtTallyCheck = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtTallyAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,14 +58,14 @@
             this.label1.Text = "Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtPayTo
             // 
-            this.textBox1.Location = new System.Drawing.Point(1624, 14);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 38);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtPayTo.Location = new System.Drawing.Point(1624, 14);
+            this.txtPayTo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtPayTo.Name = "txtPayTo";
+            this.txtPayTo.Size = new System.Drawing.Size(260, 38);
+            this.txtPayTo.TabIndex = 1;
+            this.txtPayTo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -78,14 +78,14 @@
             this.label2.Text = "Memo";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // txtMemo
             // 
-            this.textBox2.Location = new System.Drawing.Point(1624, 88);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 38);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtMemo.Location = new System.Drawing.Point(1624, 88);
+            this.txtMemo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtMemo.Name = "txtMemo";
+            this.txtMemo.Size = new System.Drawing.Size(260, 38);
+            this.txtMemo.TabIndex = 3;
+            this.txtMemo.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -98,14 +98,15 @@
             this.label3.Text = "$ (Num.)";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // txtAmount
             // 
-            this.textBox3.Location = new System.Drawing.Point(1624, 165);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 38);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtAmount.Location = new System.Drawing.Point(1624, 165);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(260, 38);
+            this.txtAmount.TabIndex = 5;
+            this.txtAmount.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // button1
             // 
@@ -118,70 +119,70 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // txtCheckPayTo
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(405, 155);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(267, 31);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtCheckPayTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.txtCheckPayTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCheckPayTo.Location = new System.Drawing.Point(405, 155);
+            this.txtCheckPayTo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtCheckPayTo.Name = "txtCheckPayTo";
+            this.txtCheckPayTo.Size = new System.Drawing.Size(267, 31);
+            this.txtCheckPayTo.TabIndex = 7;
+            this.txtCheckPayTo.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox6
+            // txtCheckMemo
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(205, 308);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(267, 31);
-            this.textBox6.TabIndex = 10;
+            this.txtCheckMemo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.txtCheckMemo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCheckMemo.Location = new System.Drawing.Point(205, 308);
+            this.txtCheckMemo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtCheckMemo.Name = "txtCheckMemo";
+            this.txtCheckMemo.Size = new System.Drawing.Size(267, 31);
+            this.txtCheckMemo.TabIndex = 10;
             // 
-            // textBox7
+            // txtCheckAmtString
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(75, 203);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(267, 31);
-            this.textBox7.TabIndex = 11;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtCheckAmtString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.txtCheckAmtString.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCheckAmtString.Location = new System.Drawing.Point(75, 203);
+            this.txtCheckAmtString.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtCheckAmtString.Name = "txtCheckAmtString";
+            this.txtCheckAmtString.Size = new System.Drawing.Size(1248, 31);
+            this.txtCheckAmtString.TabIndex = 11;
+            this.txtCheckAmtString.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox8
+            // txtCheckAmount
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(944, 157);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(267, 31);
-            this.textBox8.TabIndex = 12;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txtCheckAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCheckAmount.Location = new System.Drawing.Point(944, 157);
+            this.txtCheckAmount.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtCheckAmount.Name = "txtCheckAmount";
+            this.txtCheckAmount.Size = new System.Drawing.Size(267, 31);
+            this.txtCheckAmount.TabIndex = 12;
+            this.txtCheckAmount.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox9
+            // txtCheckNum
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(640, 408);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(267, 31);
-            this.textBox9.TabIndex = 13;
-            this.textBox9.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.txtCheckNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.txtCheckNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCheckNum.ForeColor = System.Drawing.Color.Black;
+            this.txtCheckNum.Location = new System.Drawing.Point(640, 408);
+            this.txtCheckNum.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtCheckNum.Name = "txtCheckNum";
+            this.txtCheckNum.Size = new System.Drawing.Size(267, 31);
+            this.txtCheckNum.TabIndex = 13;
+            this.txtCheckNum.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
-            // textBox10
+            // txtDate
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Location = new System.Drawing.Point(1056, 88);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(267, 31);
-            this.textBox10.TabIndex = 14;
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txtDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
+            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDate.Location = new System.Drawing.Point(1056, 88);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(267, 31);
+            this.txtDate.TabIndex = 14;
+            this.txtDate.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label5
             // 
@@ -194,14 +195,14 @@
             this.label5.Text = "Checks Number:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox11
+            // txtTallyCheck
             // 
-            this.textBox11.Location = new System.Drawing.Point(309, 513);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(260, 38);
-            this.textBox11.TabIndex = 16;
-            this.textBox11.Text = "0";
+            this.txtTallyCheck.Location = new System.Drawing.Point(309, 513);
+            this.txtTallyCheck.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtTallyCheck.Name = "txtTallyCheck";
+            this.txtTallyCheck.Size = new System.Drawing.Size(260, 38);
+            this.txtTallyCheck.TabIndex = 16;
+            this.txtTallyCheck.Text = "0";
             // 
             // label6
             // 
@@ -213,13 +214,13 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Total Amount: ";
             // 
-            // textBox12
+            // txtTallyAmount
             // 
-            this.textBox12.Location = new System.Drawing.Point(797, 513);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(260, 38);
-            this.textBox12.TabIndex = 18;
+            this.txtTallyAmount.Location = new System.Drawing.Point(797, 513);
+            this.txtTallyAmount.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtTallyAmount.Name = "txtTallyAmount";
+            this.txtTallyAmount.Size = new System.Drawing.Size(260, 38);
+            this.txtTallyAmount.TabIndex = 18;
             // 
             // Form1
             // 
@@ -227,22 +228,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1923, 594);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtTallyAmount);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.txtTallyCheck);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtCheckNum);
+            this.Controls.Add(this.txtCheckAmount);
+            this.Controls.Add(this.txtCheckAmtString);
+            this.Controls.Add(this.txtCheckMemo);
+            this.Controls.Add(this.txtCheckPayTo);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtMemo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPayTo);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form1";
@@ -256,22 +257,22 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPayTo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMemo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtCheckPayTo;
+        private System.Windows.Forms.TextBox txtCheckMemo;
+        private System.Windows.Forms.TextBox txtCheckAmtString;
+        private System.Windows.Forms.TextBox txtCheckAmount;
+        private System.Windows.Forms.TextBox txtCheckNum;
+        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtTallyCheck;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtTallyAmount;
     }
 }
 

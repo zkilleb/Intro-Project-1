@@ -31,7 +31,7 @@ namespace Checks
             DateTime thisDay = DateTime.Today;
 
             //Assigning the formated date to the correct textbox
-            textBox10.Text = (thisDay.ToString("d"));
+            txtDate.Text = (thisDay.ToString("d"));
 
             //Creating the picture box to display the check
             PictureBox picture = new PictureBox
@@ -44,7 +44,7 @@ namespace Checks
 
             //Setting the check as picture box background
             Controls.Add(picture);
-            picture.ImageLocation = @"../check.png";
+            picture.ImageLocation = @"check.png";
         }
         
         //Creating label 1 for "Name"
@@ -77,7 +77,15 @@ namespace Checks
         {
             
         }
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)  {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.')) {e.Handled = true;}
 
+            // allows only one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
+        }
         //Auto-created code for textBox4, space for name on check
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
@@ -125,24 +133,24 @@ namespace Checks
         //Code for update button
         private void button1_Click(object sender, EventArgs e)
         {
-            inputProcessor.setName(textBox1.Text);
-            inputProcessor.setMemo(textBox2.Text);
-            inputProcessor.setCheckAmount(textBox3.Text);
+            inputProcessor.setName(txtPayTo.Text);
+            inputProcessor.setMemo(txtMemo.Text);
+            inputProcessor.setCheckAmount(txtAmount.Text);
 
             //Tally needs to be set to textBox12.Text
             // = textBox12.Text;
-            textBox11.Text = inputProcessor.getCheckNumber();
-            textBox9.Text = inputProcessor.getCheckNumber();
+            txtTallyCheck.Text = inputProcessor.getCheckNumber();
+            txtCheckNum.Text = inputProcessor.getCheckNumber();
 
             //amountWord needs to be set to dollar amount in words
             //amountWord = ;
-            textBox7.Text = inputProcessor.checkAmountToString(inputProcessor.getCheckAmount());
+            txtCheckAmtString.Text = inputProcessor.checkAmountToString(inputProcessor.getCheckAmount());
 
             //Setting text boxs to user input
-            textBox4.Text = inputProcessor.getName();
-            textBox6.Text = inputProcessor.getMemo();
-            textBox8.Text = inputProcessor.getCheckAmount();
-            textBox12.Text = inputProcessor.getTotalAmount();
+            txtCheckPayTo.Text = inputProcessor.getName();
+            txtCheckMemo.Text = inputProcessor.getMemo();
+            txtCheckAmount.Text = inputProcessor.getCheckAmount();
+            txtTallyAmount.Text = inputProcessor.getTotalAmount();
 
             inputProcessor.newCheck();
 
