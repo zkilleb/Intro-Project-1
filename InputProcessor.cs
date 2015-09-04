@@ -65,12 +65,15 @@ namespace Checks
         }
         // Recursive Function
         public String convert(double i) {
-            if (i < 1) return " and " + i + "/100";
+            double cent = i - Math.Floor(i);
+                                        
+            if (i < 1) return cent * 100 + "/100";
             if (i < 20) return ones[(int)i];
             if (i < 100) return tens[(int)i / 10] + ((i % 10 > 0) ? " " + convert(i % 10) : "");
             if (i < 1000) return ones[(int)i / 100] + " Hundred" + ((i % 100 > 0) ? " and " + convert(i % 100) : "");
             if (i < 1000000) return convert(i / 1000) + " Thousand " + ((i % 1000 > 0) ? " " + convert(i % 1000) : "");
-            return convert(i / 1000000) + " Million " + ((i % 1000000 > 0) ? " " + convert(i % 1000000) : "");
+            if (i < 10000000) return convert(i / 1000000) + " Million " + ((i % 1000000 > 0) ? " " + convert(i % 1000000) : "");
+            return " and " + cent * 100 + " /100";
         }
     }
 }
