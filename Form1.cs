@@ -77,7 +77,15 @@ namespace Checks
         {
             
         }
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)  {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.')) {e.Handled = true;}
 
+            // allows only one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1)) {
+                e.Handled = true;
+            }
+        }
         //Auto-created code for textBox4, space for name on check
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
