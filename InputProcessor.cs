@@ -66,10 +66,17 @@ namespace Checks
         // Recursive Function
         public String convert(double i)
         {
+            /* 
+            The round is to avoid any rounding erros that could occur when multiplying by 100. 
+            i is the amount left to convert into a word. The process for converting is i is divied by 10 to find out
+            what the current place value is. That place value is then used as index for an array of word values. The remaining
+            digits in i is used as agruments for another convert call.
+            */
+            i = Math.Round(i, 2);
             if (i < 1) return " dollars and " + (int)(i * 100) + "/100 cents";
             if (i < 20) return ones[(int)i] + ((i - Math.Floor(i) > 0) ? convert(i - Math.Floor(i)) : "");
             if (i < 100) return tens[(int)i / 10] + ((i % 10 > 0) ? " " + convert(i % 10) : "");
-            if (i < 1000) return ones[(int)i / 100] + " Hundred" + ((i % 100 > 0) ? " and " + convert(i % 100) : "");
+            if (i < 1000) return ones[(int)i / 100] + " Hundred" + ((i % 100 > 0) ? " " + convert(i % 100) : "");
             if (i < 10000) return ones[(int)i / 1000] + " Thousand " + ((i % 1000 > 0) ? " " + convert(i % 1000) : "");
             if (i < 100000) return convert(i / 1000000) + " Million " + ((i % 1000000 > 0) ? " " + convert(i % 1000000) : "");
             return "Value too large!";
